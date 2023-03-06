@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<title>Kalkulator Sederhana</title>
+</head>
+<body>
+	<div align="left">
+<form name="form1" action="#">
+<p>bil 1  <input type="text" name="angka1" /></p>
+<p>bil 2  <input type="text" name="angka2" /></p>
+<p>hasil  <input type="text" name="hasil" disabled="true" /></p>
+<p>operator <select name="opt"></p>
+ <option value="tambah"> + (tambah)</option>
+ <option value="kurang"> - (kurang)</option>
+ <option value="kali"> * (kali)</option>
+ <option value="bagi"> / (bagi)</option>
+</select>
+<input type="button" value="=" onClick="hitung()" />
+<input type="button" value="CLEAR" onClick="resetForm()" />
+<script language="JavaScript" type="text/javascript">
+
+<!--
+
+function hitung(){
+
+var kalku = document.form1;
+var angka1=eval(kalku.angka1.value);
+var angka2=eval(kalku.angka2.value);
+var pil= kalku.opt.value;
+if (pil == "tambah") {
+var z = angka1 + angka2;
+ }else if (pil == "kurang") {
+var z = angka1 - angka2;
+ } else if (pil == "kali") {
+var z = angka1 * angka2;
+ } else if (pil == "bagi") {
+var z = angka1 / angka2;
+ }
+ kalku.hasil.value = z;
+ kalku.angka1.value = "";
+ kalku.angka2.value = "";
+}
+function resetForm(){
+document.form1.reset();
+}
+
+//-->
+
+</script>
+
+</form>
+</body>
+</html>
+ 
